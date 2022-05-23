@@ -9,24 +9,50 @@
     <title>Forca</title>
 </head>
 <body>
-    <section class="notepad">
-        <div class="notepad-style">
-            <div class="notepad-rows">
-                <div class="row"></div>
-            </div>
-            <div class="notepad-columns">
-                <div class="double-line"></div>
-                <div class="thick-line"></div>
-            </div>
+    <main class="notepad">
+        <section class="notepad-body">
+                <div class="notepad-style">
+                    <div class="notepad-rows">
+                        <div class="row"></div>
+                    </div>
+                    <div class="notepad-columns">
+                        <div class="double-line"></div>
+                        <div class="thick-line"></div>
+                    </div>
+                </div>
+                <menu class="buttons">
+                    <button>Jogar Forca</button>
+                    <button>Adicionar Palavras</button>
+                </menu>
+                <div class="date">
+                    <div class="set-date">
+                        <span class="dia"></span>/ <span class="mes"></span> / <span class="ano"></span>
+                    </div>
+                    <div class="week">
+                        <label><input type="radio" name="dia" id="seg">Seg</label>
+                        <label ><input type="radio" name="dia" id="ter">Ter</label>
+                        <label ><input type="radio" name="dia" id="qua">Qua</label>
+                        <label ><input type="radio" name="dia" id="qui">Qui</label>
+                        <label ><input type="radio" name="dia" id="sex">Sex</label>
+                        <label ><input type="radio" name="dia" id="sab">Sab</label>
+                        <label ><input type="radio" name="dia" id="dom">Dom</label>
+                    </div>
+                </div>
+                
+        </section>
+       
+
+    </main>
+
+    <footer>
+        <div class="page-info">&copy; Created by:<strong><a href="https://www.linkedin.com/in/ricardo-de-souza-silva-3812a9224/">Ricardo Silva</a></strong> </div>
+        <div class="thanks"><small> - Challenge by:
+            <a href="https://www.alura.com.br/" target="_blank"> Alura</a> 
+            & 
+            <a href="https://www.oracle.com/br/education/oracle-next-education/" target="_blank">Oracle - ONE</a></small>
         </div>
-        <menu class="buttons">
-            <button>Jogar</button>
-            <button>Adicionar Palavras</button>
-        </menu>
-
-
-    </section>
-
+    </footer>
+ 
 
     <script src="main.js"></script>
 </body>

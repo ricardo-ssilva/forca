@@ -6,6 +6,14 @@
 }
 
 /* notepad background - rows and columns */
+h1 {
+    font-size: 100px;
+    position: absolute;
+    top: 50px;
+    width: 100vw;
+    text-align: center;
+    
+}
 .notepad {
     position: absolute;
     height: 100vh;
@@ -47,6 +55,39 @@
     height: 100vh;
 }
 
+/* notepad - dates */
+.set-date {
+    position: absolute;
+    z-index: 99;
+    font-weight: 900;
+    border: 2px solid black;
+    width: 140px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 6px;
+    top: 30px;
+    right: 140px;
+    background-color: rgba(252, 252, 54, 0.822);
+    transform: rotate(-1deg);
+}
+.set-date:hover {
+    background-color: rgba(250, 250, 31, 0.822);
+    transform: rotate(-2deg);
+    width: 150px;
+    font-size: 20px;
+    box-shadow: 3px 1px 4px 1px rgba(94, 94, 94, 0.219);
+}  
+.week {
+    position: absolute;
+    top: 40px;
+    left: 140px;
+}
+.week label {
+    font-weight: 900;
+    margin-right: 8px;
+}
+
+
 /* menu */
 .buttons {
     position: absolute;
@@ -65,26 +106,25 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(247, 247, 179, 0.822);
     transition: all ease 0.1s;
 }
 button:first-child {
     font-family: 'Grape Nuts', cursive;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 65px;
     height: 143px;
     width: 480px;
     border-width: 3px 4px 3px 5px;
     border-radius: 8px 10%;
     transform: rotate(1deg);
-      background-color: rgba(248, 248, 123, 0.822);
+      background-color: rgba(248, 248, 86, 0.822);
 }
 button:first-child:hover {
     transform: scale(1.1);
-    font-size: 65px;
+    font-size: 75px;
     border-radius:  10% 8%;
     box-shadow: 3px 1px 4px 1px rgba(53, 52, 52, 0.37);
-    background-color: rgba(252, 252, 54, 0.822);
+    background-color: rgba(250, 250, 24, 0.822);
  }
  button:last-child {
     font-family: 'Grape Nuts', cursive;
@@ -92,6 +132,7 @@ button:first-child:hover {
     font-size: 30px;
     border-width: 3px 4px 3px 5px;
     border-radius: 10% 8px;
+    background-color: rgba(248, 248, 157, 0.822);
 }
 button:last-child:hover {
     transform: scale(1.1);
@@ -99,4 +140,15 @@ button:last-child:hover {
     border-radius: 18% 7px;
     box-shadow: 3px 1px 4px 1px rgba(53, 52, 52, 0.37);
     background-color: rgba(252, 252, 54, 0.822);
+}
+
+
+
+/* footer */
+footer {
+    font-size: 25px;
+    height: 30px;
+    position: absolute;
+    bottom: 60px;
+    right: 120px;
 }
