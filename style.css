@@ -1,66 +1,102 @@
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
-    text-decoration: none;
-    color: black;
+    font-family: 'Grape Nuts', cursive;
 }
-h1 {
+
+/* notepad background - rows and columns */
+.notepad {
     position: absolute;
-    left: 50px;
-    top: 30px;
-}
-.main-menu {
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
+    background-color: rgb(252, 252, 215);
+}
+.notepad-rows{
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 60px;
+}
+.rows{
+    height: 40px;
+    color: rgba(0, 0, 0, 0.74);
+    width: 100%;
+    border-bottom: 1px solid rgba(1, 1, 48, 0.342);
+}
+.double-line {
+    position: absolute;
+    width: 80px;
+    height: 100vh;
+    border-right: 2px solid red;
+}
+.double-line::after {
+    position: absolute;
+    content: '';
+    width: 85px;
+    height: 100vh;
+    border-right: 1px solid red;
+}
+.thick-line {
+    position: absolute;
+    right: 80px;
+    top: 0;
+    border-left: 1px solid red;
+    height: 100vh;
+}
+
+/* menu */
+.buttons {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 button {
-    color: white;
-    font-size: 18px;
-    width: 320px;
-    height: 105px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-}
-button:first-child {
-    background-color: blue;
-}
-button:last-child { 
-    border: 1px solid blue;
-}
-
-
-
-
-/* footer */
-footer {
-    width: 100vw;
-    text-align: center;
-    background-color: var(--third-gradient-color);
-    color: black;
-}
-span {
-    margin-left: 8px;
-    font-weight: bold;
-}
-.page-info {
+    border: 2px solid rgb(0, 0, 0);
+    height: 80px;
+    margin: 10px;
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 5px 0px;
+    background-color: rgba(247, 247, 179, 0.822);
+    transition: all ease 0.1s;
 }
-.page-info a:hover{
-    border-bottom: 1px black solid ;
+button:first-child {
+    font-family: 'Grape Nuts', cursive;
+    font-weight: bold;
+    font-size: 50px;
+    height: 143px;
+    width: 480px;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 8px 10%;
+    transform: rotate(1deg);
+      background-color: rgba(248, 248, 123, 0.822);
 }
-.offered {
-    padding-bottom: 5px;
+button:first-child:hover {
+    transform: scale(1.1);
+    font-size: 65px;
+    border-radius:  10% 8%;
+    box-shadow: 3px 1px 4px 1px rgba(53, 52, 52, 0.37);
+    background-color: rgba(252, 252, 54, 0.822);
+ }
+ button:last-child {
+    font-family: 'Grape Nuts', cursive;
+    font-weight: 900;
+    font-size: 30px;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 10% 8px;
 }
-.thanks a:hover{
-    border-bottom: 1px black solid ;
+button:last-child:hover {
+    transform: scale(1.1);
+    font-size: 40px;
+    border-radius: 18% 7px;
+    box-shadow: 3px 1px 4px 1px rgba(53, 52, 52, 0.37);
+    background-color: rgba(252, 252, 54, 0.822);
 }
