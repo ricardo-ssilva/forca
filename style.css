@@ -67,7 +67,7 @@ h1 {
     padding: 6px;
     top: 30px;
     right: 140px;
-    background-color: rgba(252, 252, 54, 0.822);
+    background-color: rgb(252, 252, 215);
     transform: rotate(-1deg);
 }
 .set-date:hover {
@@ -79,13 +79,26 @@ h1 {
 }  
 .week {
     position: absolute;
+    display: flex;
     top: 40px;
     left: 140px;
 }
-.week label {
+.days {
+    font-size: 20px;
     font-weight: 900;
-    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
 }
+.day-box {
+    width: 15px;
+    height: 15px;
+    margin-right: 1px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
 
 
 /* menu */
@@ -107,6 +120,7 @@ button {
     justify-content: center;
     align-items: center;
     transition: all ease 0.1s;
+    cursor: pointer;
 }
 button:first-child {
     font-family: 'Grape Nuts', cursive;
@@ -117,7 +131,7 @@ button:first-child {
     border-width: 3px 4px 3px 5px;
     border-radius: 8px 10%;
     transform: rotate(1deg);
-      background-color: rgba(248, 248, 86, 0.822);
+    background-color: rgba(253, 253, 131, 0.822);
 }
 button:first-child:hover {
     transform: scale(1.1);
@@ -149,6 +163,9 @@ footer {
     font-size: 25px;
     height: 30px;
     position: absolute;
-    bottom: 60px;
+    bottom: 100px;
     right: 120px;
+}
+.info div {
+    margin-bottom: 10px;
 }
