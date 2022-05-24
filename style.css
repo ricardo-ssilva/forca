@@ -32,7 +32,7 @@ h1 {
     height: 40px;
     color: rgba(0, 0, 0, 0.74);
     width: 100%;
-    border-bottom: 1px solid rgba(1, 1, 48, 0.342);
+    border-bottom: 1px solid rgba(1, 1, 48, 0.151);
 }
 .double-line {
     position: absolute;
@@ -160,7 +160,38 @@ button:last-child:hover {
     background-color: rgba(252, 252, 54, 0.822);
 }
 
+/* table */
+.table {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 
+}
+canvas {
+    display: none;
+    /* border: 1px solid  black; */
+
+    transition: all ease 1s;
+    opacity: 0;
+    margin-top: 140px;
+    width: 500px;
+    height: 360px;
+ 
+}
+
+.alfabet {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    font-weight: 900;
+    top: 580px;
+    width: 100vw;
+    justify-content: center;
+    font-size: 35px;
+    transition: all ease-in 0.65s;
+}
 
 /* footer */
 footer {

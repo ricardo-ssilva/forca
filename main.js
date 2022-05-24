@@ -6,11 +6,12 @@ console.log(button[0])
 console.log(button[1])
 
 play.onclick = gameInit
+addWords.onclick = removebuttons
 
-
+//Game functions
 function gameInit() {
     removebuttons()
-
+    addTable()
    
 }
 
@@ -22,9 +23,38 @@ function removebuttons() {
         document.querySelector('.btn-play').style.display = 'none'
         document.querySelector('.btn-addword').style.display = 'none'
     }, 300)
+}
+function addTable() {
+    document.querySelector('canvas').style.display = 'block'
+    document.querySelector('.alfabet').style.display = 'flex'
+    setTimeout(()=> {
+         document.querySelector('canvas').style.opacity = 1
+         document.querySelector('.alfabet').style.opacity = 1
+             drawHang()
+    }, 500)
+
+    
+    
    
+      
+ 
+    
+}
+//draw hang 
+function drawHang() {
+    var tela = document.querySelector('canvas')
+    var pincel = tela.getContext('2d')
+
+    pincel.fillStyle = 'black'
+    pincel.fillRect(130, 16, 4, 118)
+    pincel.fillRect(130, 16, 50, 3)
+    pincel.fillRect(180, 16, 2 ,25 )
+    pincel.fillRect(95, 133, 110, 3)
 }
 
+
+
+//Notepad functions
 function drawRows(){
     let screenHeight = document.querySelector('.notepad').clientHeight
     let qtdRows = Math.floor(screenHeight / 40)
@@ -76,4 +106,5 @@ function writeDate () {
  
 }
 writeDate()
-setInterval(drawRows, 200)
+drawRows()
+// setInterval(drawRows, 200)
