@@ -1,3 +1,29 @@
+const button = document.querySelectorAll('button')
+const play = button[0]
+const addWords = button[1]
+
+console.log(button[0])
+console.log(button[1])
+
+play.onclick = gameInit
+
+
+function gameInit() {
+    removebuttons()
+
+   
+}
+
+function removebuttons() {
+    document.querySelector('.btn-play').style.opacity = 0  
+    document.querySelector('.btn-addword').style.opacity = 0  
+
+    setTimeout(() => {
+        document.querySelector('.btn-play').style.display = 'none'
+        document.querySelector('.btn-addword').style.display = 'none'
+    }, 300)
+   
+}
 
 function drawRows(){
     let screenHeight = document.querySelector('.notepad').clientHeight
@@ -50,4 +76,4 @@ function writeDate () {
  
 }
 writeDate()
-setInterval(drawRows, 500)
+setInterval(drawRows, 200)
