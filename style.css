@@ -5,19 +5,40 @@
     font-family: 'Grape Nuts', cursive;
 }
 body {
+    background-color: rgb(252, 252, 215);
     width: 100vw;
-    background-image: url('data:image/webp;base64,UklGRh4CAABXRUJQVlA4IBICAADwHgCdASr6APoAPm02lkmkIqGiIHVY8IANiWlu4XXO/Wf3jovpwFD5ZD5//E/1z/AD0QCvq+9mSOdQ1O+iMPwdqd9UHCLqSQMc9NLOX7HMqJWrde0Wls/p1at17Raut6d2uCo5FYDVWRUEBBuBTz7gMCt/E/GO789LMkc6hqd9UFXPdPsVzUo1HwbMeky4gAUDKTqoORa9pXLyM/zqGsqQ451DVEpXRbp6wVqRtSNqRtSOrOkrUqJvuUjcM5Z0KepSSHG6Nlk+eOlbJWp31Sfsxll1qUTiRzqGp31QVc90l4RcyyFTCLzhkJxI1StLRyPTSf7m4/iHanfVBwi60tEAAP718fHkiZvpTS4OnrYk1njw5CTWePD2QAxIPjYxmXxgAXGBHe4BjeJ2qdqnap2qdqnap2qen8Mj/7R4mAAAAQhxfM+yuUKjmL/THBvW5gLhco5OaWrNOgL8lPDC9udbz/gBrcjsf8jMXIfE9yHwyRYEEom4zp6/SToPFPxrfOdAILHwoVRxpvPLbownplPno5WDgGZQCQqN615ZgRqO9oUitLg547PLw/fBEy3cVOsZAV0G9e6ybhIFSRxS6SwEw8+nadEtgK7KkqMrq2jqyAQCvpLO/9cFCox29/IAnqvv88I0Qg1iNaxZw3IYyXzHl9aNE3s/dIXSQWZY6KzI0EQBcHomh4R+gYw0lriePVLAAA==');
-    background-size: 1920px 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
     overflow-x:hidden ;
+    
 }
 /* notepad background - rows and columns */
 
 .notepad {
+    background-image: url("http://i.stack.imgur.com/yWNH7.png");
     position: relative;
+    top: 60px;
     height: 100vh;
-    width: 100vw;
+    width: 93%;
+    background-size: 1.7px;
+    background-position:  bottom 40px right 20px;
+  
     /* overflow: hidden; */
-    background-color: rgba(252, 252, 16, 0.185);
+}
+
+.notepad-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 100vh;
+ 
+    background-color: rgba(250, 250, 205, 0.788);
 }
 /* .notepad-rows{
     display: block;
@@ -62,7 +83,7 @@ body {
 }
 .double-line {
     position: absolute;
-    width: 80px;
+    left: 5%;
     height: 100%;
     border-right: 2px solid red;
 
@@ -70,14 +91,14 @@ body {
 .double-line::after {
     position: absolute;
     content: '';
-    width: 85px;
+    left: 10px;
     height: 100%;
     border-right: 1px solid red;
 }
 .thick-line {
     position: absolute;
     right: 80px;
-    top: 0;
+    right: 5%;
     border-left: 1px solid red;
     height: 100%;
 } 
@@ -130,6 +151,7 @@ body {
 
 /* menu */
 .menu-buttons {
+    margin-top: -90px;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -141,14 +163,9 @@ body {
     
 }
 button {
-    
-
-
-   
     display: flex;
     justify-content: center;
     align-items: center;
-   
     cursor: pointer;
 }
 .btn-play {
@@ -162,7 +179,7 @@ button {
     border-radius: 8px 10%;
     transform: rotate(1deg);
     transition: all ease 0.2s;
-    background-color: rgba(253, 253, 131, 0.822);
+    background-color: rgba(250, 250, 102, 0.822);
 }
 .btn-play:hover {
     transform: scale(1.1);
@@ -193,48 +210,61 @@ button {
 
 /* table */
 .table {
+    position: absolute;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    
+    /* background-color: aqua; */
 
 }
 canvas {
     display: none;
+    
     /* border: 1px solid  black; */
-
     transition: all ease 1s;
     opacity: 0;
-    margin-top: 140px;
+    margin-top: 80px;
     width: 500px;
     height: 360px;
  
 }
 
 .game-keyboard {
+    /* border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    background-color: rgb(247, 247, 192); */
     position: absolute;
     display: none;
     opacity: 0;
     font-weight: 900;
-    top: 580px;
-    width: 100vw;
+    top: 615px;
+
     justify-content: center;
-    font-size: 35px;
+    font-size: 40px;
     transition: all ease-in 0.65s;
 }
 .keyboard {
-    margin-right: 10px;
+    /* text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.295); */
     font-size: 30px;
     font-weight: 900;
     border: none;
+    bor
+    height: 45px;
+    width: 45px;
     outline: none;
     background-color: rgba(0, 0, 0, 0);
-   
+    border-radius: 50%;
     z-index: 99;
+    
+ 
 }
 .keyboard:hover{
     background-color: rgb(252, 252, 54);
+    border: 1px solid black;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.445);
 }
 
 /* footer */
@@ -245,6 +275,7 @@ footer {
     justify-content: flex-end;
     align-items: center;
     width: 100vw;
+    
     /* border-top: 1px solid #333;
     bottom: 0;
     left: 0;
@@ -257,7 +288,8 @@ footer {
     bottom: 100px;
     right: 120px; */ 
 }
-.info div {
-    margin-bottom: 10px;
+.info  {
+    margin-bottom: 30px;
     margin-right: 140px;
+    z-index: 99;
 }

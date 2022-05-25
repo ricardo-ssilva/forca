@@ -1,26 +1,19 @@
 const button = document.querySelectorAll('button')
 const play = button[0]
 const addWords = button[1]
-let gameKeyboard = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
-
-
+//click events
 play.onclick = gameInit
-addWords.onclick = removebuttons
-
-
-
-
-
+addWords.onclick = removeMenuButtons
 
 //Game functions
 function gameInit() {
-    removebuttons()
+    removeMenuButtons()
     addTable()
    
 }
 
-function removebuttons() {
+function removeMenuButtons() {
     document.querySelector('.btn-play').style.opacity = 0  
     document.querySelector('.btn-addword').style.opacity = 0  
 
@@ -38,31 +31,6 @@ function addTable() {
         drawHang()
         addKeyboard()
     }, 500)
-
-    
-function addKeyboard () {
-    for(let i = 0; i < gameKeyboard.length; i++) {
-        document.querySelector('.game-keyboard').innerHTML += `<button class="keyboard">${gameKeyboard[i].toLocaleUpperCase()}</button>`
-    }
-    let keyboard = document.querySelectorAll('.keyboard')
-    console.log(keyboard[14])
-  }
-    
-   
-      
- 
-    
-}
-//draw hang 
-function drawHang() {
-    var tela = document.querySelector('canvas')
-    var pincel = tela.getContext('2d')
-
-    pincel.fillStyle = 'black'
-    pincel.fillRect(130, 16, 4, 118)
-    pincel.fillRect(130, 16, 50, 3)
-    pincel.fillRect(180, 16, 2 ,25 )
-    pincel.fillRect(95, 133, 110, 3)
 }
 
 
@@ -106,8 +74,6 @@ function writeDate () {
             document.querySelector('.sun').style.backgroundColor = "black"
             break;
     }
-
- 
 }
 
 writeDate()
