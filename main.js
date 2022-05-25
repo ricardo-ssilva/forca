@@ -1,12 +1,17 @@
 const button = document.querySelectorAll('button')
 const play = button[0]
 const addWords = button[1]
+let gameKeyboard = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
-console.log(button[0])
-console.log(button[1])
+
 
 play.onclick = gameInit
 addWords.onclick = removebuttons
+
+
+
+
+
 
 //Game functions
 function gameInit() {
@@ -26,14 +31,22 @@ function removebuttons() {
 }
 function addTable() {
     document.querySelector('canvas').style.display = 'block'
-    document.querySelector('.alfabet').style.display = 'flex'
+    document.querySelector('.game-keyboard').style.display = 'flex'
     setTimeout(()=> {
          document.querySelector('canvas').style.opacity = 1
-         document.querySelector('.alfabet').style.opacity = 1
-             drawHang()
+         document.querySelector('.game-keyboard').style.opacity = 1
+        drawHang()
+        addKeyboard()
     }, 500)
 
     
+function addKeyboard () {
+    for(let i = 0; i < gameKeyboard.length; i++) {
+        document.querySelector('.game-keyboard').innerHTML += `<button class="keyboard">${gameKeyboard[i].toLocaleUpperCase()}</button>`
+    }
+    let keyboard = document.querySelectorAll('.keyboard')
+    console.log(keyboard[14])
+  }
     
    
       
