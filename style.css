@@ -4,31 +4,29 @@
     box-sizing: border-box;
     font-family: 'Grape Nuts', cursive;
 }
-
-/* notepad background - rows and columns */
-h1 {
-    font-size: 100px;
-    position: absolute;
-    top: 50px;
+body {
     width: 100vw;
-    text-align: center;
-    
+    background-image: url('data:image/webp;base64,UklGRh4CAABXRUJQVlA4IBICAADwHgCdASr6APoAPm02lkmkIqGiIHVY8IANiWlu4XXO/Wf3jovpwFD5ZD5//E/1z/AD0QCvq+9mSOdQ1O+iMPwdqd9UHCLqSQMc9NLOX7HMqJWrde0Wls/p1at17Raut6d2uCo5FYDVWRUEBBuBTz7gMCt/E/GO789LMkc6hqd9UFXPdPsVzUo1HwbMeky4gAUDKTqoORa9pXLyM/zqGsqQ451DVEpXRbp6wVqRtSNqRtSOrOkrUqJvuUjcM5Z0KepSSHG6Nlk+eOlbJWp31Sfsxll1qUTiRzqGp31QVc90l4RcyyFTCLzhkJxI1StLRyPTSf7m4/iHanfVBwi60tEAAP718fHkiZvpTS4OnrYk1njw5CTWePD2QAxIPjYxmXxgAXGBHe4BjeJ2qdqnap2qdqnap2qen8Mj/7R4mAAAAQhxfM+yuUKjmL/THBvW5gLhco5OaWrNOgL8lPDC9udbz/gBrcjsf8jMXIfE9yHwyRYEEom4zp6/SToPFPxrfOdAILHwoVRxpvPLbownplPno5WDgGZQCQqN615ZgRqO9oUitLg547PLw/fBEy3cVOsZAV0G9e6ybhIFSRxS6SwEw8+nadEtgK7KkqMrq2jqyAQCvpLO/9cFCox29/IAnqvv88I0Qg1iNaxZw3IYyXzHl9aNE3s/dIXSQWZY6KzI0EQBcHomh4R+gYw0lriePVLAAA==');
+    background-size: 1920px 1080px;
+    overflow-x:hidden ;
 }
+/* notepad background - rows and columns */
+
 .notepad {
-    position: absolute;
+    position: relative;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
-    background-color: rgb(252, 252, 215);
+    /* overflow: hidden; */
+    background-color: rgba(247, 247, 7, 0.185);
 }
-.notepad-rows{
+/* .notepad-rows{
     display: block;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+   
     top: 60px;
 }
 .rows{
+    position: absolute;
     height: 40px;
     color: rgba(0, 0, 0, 0.74);
     width: 100%;
@@ -37,14 +35,15 @@ h1 {
 .double-line {
     position: absolute;
     width: 80px;
-    height: 100vh;
+    height: 100%;
     border-right: 2px solid red;
+
 }
 .double-line::after {
     position: absolute;
     content: '';
     width: 85px;
-    height: 100vh;
+    height: 100%;
     border-right: 1px solid red;
 }
 .thick-line {
@@ -52,8 +51,36 @@ h1 {
     right: 80px;
     top: 0;
     border-left: 1px solid red;
-    height: 100vh;
+    height: 100%;
+} */
+
+.notepad-columns {
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 120px);
+    top: 0px;
 }
+.double-line {
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    border-right: 2px solid red;
+
+}
+.double-line::after {
+    position: absolute;
+    content: '';
+    width: 85px;
+    height: 100%;
+    border-right: 1px solid red;
+}
+.thick-line {
+    position: absolute;
+    right: 80px;
+    top: 0;
+    border-left: 1px solid red;
+    height: 100%;
+} 
 
 /* notepad - dates */
 .set-date {
@@ -110,7 +137,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
- 
+    z-index: 99;
     
 }
 button {
@@ -195,12 +222,25 @@ canvas {
 
 /* footer */
 footer {
-    font-size: 25px;
-    height: 30px;
+    position: relative;
+    background-color: rgb(252, 252, 215);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    /* border-top: 1px solid #333;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    position: fixed;
+    width: 100%; */
+     font-size: 25px;
+    /* height: 30px;
     position: absolute;
     bottom: 100px;
-    right: 120px;
+    right: 120px; */ 
 }
 .info div {
     margin-bottom: 10px;
+    margin-right: 140px;
 }

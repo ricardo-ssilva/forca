@@ -10,66 +10,67 @@
 </head>
 <body>
     <main class="notepad">
-        <section class="notepad-body">
-                <div class="notepad-style">
-                    <div class="notepad-rows">
-                        <div class="row"></div>
-                    </div>
-                    <div class="notepad-columns">
-                        <div class="double-line"></div>
-                        <div class="thick-line"></div>
-                    </div>
-                </div>
-                <menu class="menu-buttons">
-                    <button class="btn-play">Jogar </button>
-                    <button class="btn-addword">Adicionar Palavras</button>
-                </menu>
-                <div class="date">
-                    <div class="set-date">
-                        <span class="dia"></span>/ <span class="mes"></span> / <span class="ano"></span>
-                    </div>
-                    <div class="week">
-                       <div class="days">
-                           <div class="day-box mon"></div>
-                           <div class="day">Seg</div>
-                       </div>
-                       <div class="days">
-                           <div class="day-box tue"></div>
-                           <div class="day">Ter</div>
-                       </div>
-                       <div class="days">
-                           <div class="day-box wed"></div>
-                           <div class="day">Qua</div>
-                       </div>
-                       <div class="days">
-                           <div class="day-box thu"></div>
-                           <div class="day">Qui</div>
-                       </div>
-                       <div class="days">
-                           <div class="day-box fry"></div>
-                           <div class="day">Sex</div>
-                       </div>
-                       <div class="days">
-                           <div class="day-box sat"></div>
-                           <div class="day">Sab</div>
-                       </div>
-                       <div class="days">
-                           <div class="day-box sun"></div>
-                           <div class="day">Dom</div>
-                       </div>
-                    </div>
-                </div>
-                <div class="alfabet">
-                    <div class="a">A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z</div>
-                </div>
-        </section>
+        <div class="notepad-container">
+            <menu class="menu-buttons">
+                <button class="btn-play">Jogar </button>
+                <button class="btn-addword">Adicionar Palavras</button>
+            </menu>
+            
+        </div>
+
+              
+                
+               
+        <div class="alfabet">
+            <div class="a">A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z</div>
+        </div>
+      
        <section class="table">
             <canvas>
                 
             </canvas>
-       </section>
-
+       </section> 
     </main>
+    
+
+    <section class="notepad-dates">
+
+        <div class="date">
+            <div class="set-date">
+                <span class="dia"></span>/ <span class="mes"></span> / <span class="ano"></span>
+            </div>
+            <div class="week">
+               <div class="days">
+                   <div class="day-box mon"></div>
+                   <div class="day">Seg</div>
+               </div>
+               <div class="days">
+                   <div class="day-box tue"></div>
+                   <div class="day">Ter</div>
+               </div>
+               <div class="days">
+                   <div class="day-box wed"></div>
+                   <div class="day">Qua</div>
+               </div>
+               <div class="days">
+                   <div class="day-box thu"></div>
+                   <div class="day">Qui</div>
+               </div>
+               <div class="days">
+                   <div class="day-box fry"></div>
+                   <div class="day">Sex</div>
+               </div>
+               <div class="days">
+                   <div class="day-box sat"></div>
+                   <div class="day">Sab</div>
+               </div>
+               <div class="days">
+                   <div class="day-box sun"></div>
+                   <div class="day">Dom</div>
+               </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="info">
@@ -83,9 +84,16 @@
                 <a href="https://www.oracle.com/br/education/oracle-next-education/" target="_blank">Oracle - ONE</a></small>
             </div>
         </div>
-       
+    </div>
+ 
     </footer>
  
+    <div class="notepad-columns">
+            <div class="double-line"></div>
+            <div class="thick-line"></div>
+    </div>
+
+
 
     <script src="main.js"></script>
 </body>

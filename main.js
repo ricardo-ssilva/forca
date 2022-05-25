@@ -55,15 +55,6 @@ function drawHang() {
 
 
 //Notepad functions
-function drawRows(){
-    let screenHeight = document.querySelector('.notepad').clientHeight
-    let qtdRows = Math.floor(screenHeight / 40)
-
-    for(let i = 0; i <= qtdRows; i++){
-        document.querySelector('.notepad-rows').innerHTML += `<div class="rows"> <br>`
-    
-    }
-}
 function writeDate () {
 
     //day - month - year
@@ -105,6 +96,6 @@ function writeDate () {
 
  
 }
+
 writeDate()
-drawRows()
-// setInterval(drawRows, 200)
+
