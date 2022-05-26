@@ -10,6 +10,7 @@ addWords.onclick = removeMenuButtons
 function gameInit() {
     removeMenuButtons()
     addTable()
+
    
 }
 

@@ -16,9 +16,49 @@ function drawHang() {
     pincel.fillRect(95, 133, 110, 3)
 }
 function addKeyboard () {
-    for(let i = 0; i < gameKeyboard.length; i++) {
-        document.querySelector('.game-keyboard').innerHTML += `<button class="keyboard">${gameKeyboard[i].toLocaleUpperCase()}</button>`
-    }
     let keyboard = document.querySelectorAll('.keyboard')
-    console.log(keyboard[14])
+
+    for(let i = 0; i < gameKeyboard.length; i++) {
+        document.querySelector('.game-keyboard').innerHTML += `<button class="keyboard" onclick="teste()">${gameKeyboard[i].toLocaleUpperCase()}</button>`
+    }
+
+    
+
+}
+function teste() {
+    console.log('opa')
+    //Vai pegar a letra digitada no teclado, armazenar em uma variavel e enviar a variavel para check(), se a letra for igual a uma letra da palvra a letra aparece na tela como correta, caso contrário, aparecera a letra indicando que estava incorreta e uma parte do corpo do homem na forca.
+
+}
+function ramdonWords() {
+    let ramdonIndex = Math.floor(Math.random() * words.length)
+    ramdonWord = words[ramdonIndex].split('')
+    console.log(ramdonWord)
+    return ramdonWord
+  
+
+    //Funciona quando inicia o game
+    //armazena a palavra splitada
+    //
+}
+
+function check() {
+    let randomWord = ramdonWords()
+    let letra = 'a'
+    console.log('palavra:',randomWord)
+    console.log('letra:', letra)
+
+    let i = 0
+    while( i <= randomWord.length){
+        if(letra == randomWord[i]){
+            console.log('certo')
+            console.log('lugar:', i)
+            //Mostra se a letra está correta na tela
+        } else {
+            console.log('errado')
+            //Mostra se a letra está correta na tela mostra a letra incorreta e desenha parte do homem na forca
+        }
+        i++
+    }
+  
 }
