@@ -11,6 +11,7 @@ function gameInit() {
     removeMenuButtons()
     addTable()
     ramdonWords()
+   
 }
 
 function removeMenuButtons() {

@@ -14,6 +14,14 @@ function drawHang() {
     pincel.fillRect(180, 16, 2 ,25 )
     pincel.fillRect(95, 133, 110, 3)
 }
+function drawHangManHead() {
+    var tela = document.querySelector('canvas')
+    var pincel = tela.getContext('2d')
+
+    pincel.beginPath();
+    pincel.arc(180, 41, 12, 0, 2*3.14);
+    pincel.fill();
+}
 // function addKeyboard () {
 //     let keyboard = document.querySelectorAll('.keyboard')
 
@@ -53,22 +61,46 @@ function check(letra) {
     console.log('palavra:',randomWord)
     console.log('letra:', letra)
     let opa = document.querySelectorAll('.underline-letra')
+  
+    
+    let verify = ramdonWord.indexOf(letra)
+    console.log(verify)
 
-    let i = 0
-    while( i <= randomWord.length){
-        if(letra == randomWord[i]){
-            console.log('certo')
-            console.log('lugar:', i)
-            //Mostra se a letra está correta na tela
-            console.log(opa[i])
-            opa[i].innerHTML = letra 
-           
-        } else {
-            console.log('errado')
-            //Mostra se a letra está correta na tela mostra a letra incorreta e desenha parte do homem na forca
-        }
-        i++
+    if(verify == -1) {
+        drawHangManHead()
+    } else {
+        let i = verify
+        opa[i].innerHTML = letra 
     }
+
+
+    // while( i <= randomWord.length){
+      
+    //     if(letra == randomWord[i]){
+    //         // console.log('certo')
+    //         // console.log('lugar:', i)
+
+    //         //Mostra se a letra está correta na tela
+    //         console.log(opa[i])
+    //         opa[i].innerHTML = letra 
+         
+    //         verify++ 
+           
+    //     } else if(verify == 0 ) {
+    //         console.log('errado')
+    //         // let erros = 0 
+    //         drawHangManHead()
+    //         // erros++
+    //         // switch(erros){
+    //         //     case 1:
+    //         //         drawHangManHead()
+    //         //         break;
+    //         // }
+           
+    //         //Mostra se a letra está correta na tela mostra a letra incorreta e desenha parte do homem na forca
+    //     }
+    //     i++
+    // }
   
 }
 
