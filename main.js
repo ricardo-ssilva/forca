@@ -10,8 +10,7 @@ addWords.onclick = removeMenuButtons
 function gameInit() {
     removeMenuButtons()
     addTable()
-
-   
+    ramdonWords()
 }
 
 function removeMenuButtons() {
@@ -30,7 +29,7 @@ function addTable() {
          document.querySelector('canvas').style.opacity = 1
          document.querySelector('.game-keyboard').style.opacity = 1
         drawHang()
-        addKeyboard()
+        // addKeyboard()
     }, 500)
 }
 

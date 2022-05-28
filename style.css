@@ -231,8 +231,15 @@ canvas {
     height: 360px;
  
 }
-
+.analog-keyboard {
+    position: absolute;
+    background-color: brown;
+    top: 615px;
+    justify-content: center;
+    z-index: 99;
+}
 .game-keyboard {
+    display: none;
     /* border-bottom: 2px solid black;
     border-top: 2px solid black;
     background-color: rgb(247, 247, 192); */
@@ -257,8 +264,6 @@ canvas {
     background-color: rgba(0, 0, 0, 0);
     border-radius: 50%;
     z-index: 99;
-    
- 
 }
 .keyboard:hover{
     background-color: rgb(252, 252, 54);
@@ -291,4 +296,23 @@ footer {
     margin-bottom: 30px;
     margin-right: 140px;
     z-index: 99;
+}
+
+
+.text {
+    background-color: rgb(228, 129, 129);
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 700px;
+    width: 100vw;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.underline-letra {
+    border-bottom: 2px solid black;
+    margin-right: 5px;
+    width: 10px;
 }
