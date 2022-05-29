@@ -2,6 +2,14 @@ const button = document.querySelectorAll('button')
 const play = button[0]
 const addWords = button[1]
 
+let gameKeyboard = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+
+//Words list
+let words = ['desafio', 'alura','teste','codigo','logica','foco','programa','jogo','dia','noite']
+let ramdonWord = ' '
+
+
 //click events
 play.onclick = gameInit
 addWords.onclick = removeMenuButtons
@@ -76,6 +84,5 @@ function writeDate () {
             break;
     }
 }
-
 writeDate()
 
