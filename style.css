@@ -316,3 +316,11 @@ footer {
     margin-right: 5px;
     width: 10px;
 }
+
+.add-word {
+    background-color: blueviolet;
+    position: absolute;
+    display: none;
+    z-index: 99;
+    
+}

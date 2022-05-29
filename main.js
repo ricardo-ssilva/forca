@@ -24,7 +24,7 @@ let ramdonWord = ' '
 
 //click events
 play.onclick = gameInit
-addWords.onclick = removeMenuButtons
+addWords.onclick = addWord
 
 //Game functions
 function gameInit() {
@@ -32,6 +32,21 @@ function gameInit() {
     addTable()
     ramdonWords()
     teste()
+}
+function addWord(){
+    removeMenuButtons()
+    document.querySelector('.add-word').style.display = 'block'
+ 
+
+}
+function opa(){ 
+     
+    let input = document.querySelector('.add-word input')
+ 
+  let text = input.value
+  words.push(text)
+  console.log(text)
+  console.log(words)
 }
 
 function removeMenuButtons() {
