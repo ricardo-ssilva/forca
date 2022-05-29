@@ -17,6 +17,7 @@ let gameKeyboard = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',
 
 
 //Words list
+
 let words = ['desafio', 'alura','teste','codigo','logica','foco','programa','jogo','dia','noite']
 let ramdonWord = ' '
 
@@ -93,18 +94,25 @@ function teste() {
 }
 
 function check(letra) {
-    let randomWord = ramdonWord
-     letra 
-    console.log('palavra:',randomWord)
-    console.log('letra:', letra)
     let opa = document.querySelectorAll('.underline-letra')
-  
+
+
+    var indices = [];
+    var array = ramdonWord;
+    var elemento = letra;
+    var idx = array.indexOf(elemento);
+    while (idx != -1) {
+      indices.push(idx);
+      idx = array.indexOf(elemento, idx + 1);
+    }
+    console.log(indices);
+
     
-    let verify = ramdonWord.indexOf(letra)
-    console.log(verify)
+     idx = ramdonWord.indexOf(letra)
+    console.log(idx)
 
   
-    if(verify == -1) {
+    if(idx == -1) {
         loseCount++
        console.log('asdasdsad',loseCount)
        switch(loseCount){
@@ -132,8 +140,14 @@ function check(letra) {
        }
         
     } else {
-        let i = verify
-        opa[i].innerHTML = letra 
+           
+        let i = 0
+        while(i < indices.length) {
+            opa[indices[i]].innerHTML = letra
+            i++
+        }
+
+   
     }
   
 }
