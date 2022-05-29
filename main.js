@@ -1,8 +1,19 @@
 const button = document.querySelectorAll('button')
 const play = button[0]
 const addWords = button[1]
+let loseCount = 0
 
 let gameKeyboard = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+// function addKeyboard () {
+//     let keyboard = document.querySelectorAll('.keyboard')
+
+//     for(let i = 0; i < gameKeyboard.length; i++) {
+//         document.querySelector('.game-keyboard').innerHTML += `<button class="keyboard" onclick="teste()">${gameKeyboard[i].toLocaleUpperCase()}</button>`
+//     }
+
+    
+
+// }
 
 
 //Words list
@@ -19,7 +30,6 @@ function gameInit() {
     removeMenuButtons()
     addTable()
     ramdonWords()
-   
 }
 
 function removeMenuButtons() {
@@ -41,7 +51,87 @@ function addTable() {
         // addKeyboard()
     }, 500)
 }
+function ramdonWords() {
+    let ramdonIndex = Math.floor(Math.random() * words.length)
+     ramdonWord = words[ramdonIndex].split('')
+    // console.log(ramdonWord)
+   
+    addUnderline(ramdonWord)
+    return ramdonWord
+    //Funciona quando inicia o game
+    //armazena a palavra splitada
+    //
+}
+function teste() {
 
+    let input = document.querySelector('.analog-keyboard input')
+   
+    let text = input.value
+    console.log(text)
+    check(text)
+    //Vai pegar a letra digitada no teclado, armazenar em uma variavel e enviar a variavel para check(), se a letra for igual a uma letra da palvra a letra aparece na tela como correta, caso contrário, aparecera a letra indicando que estava incorreta e uma parte do corpo do homem na forca.
+
+}
+
+function check(letra) {
+    let randomWord = ramdonWord
+     letra 
+    console.log('palavra:',randomWord)
+    console.log('letra:', letra)
+    let opa = document.querySelectorAll('.underline-letra')
+  
+    
+    let verify = ramdonWord.indexOf(letra)
+    console.log(verify)
+
+  
+    if(verify == -1) {
+        loseCount++
+       console.log('asdasdsad',loseCount)
+       switch(loseCount){
+           case 1:
+               drawHangManHead();
+               break;
+            case 2: 
+                drawHangManBody();
+                break;
+            case 3:
+                drawHangManLftArm();
+                break;
+            case 4: 
+                drawHangManRgtArm();
+                break;
+            case 5: 
+                drawHangManLftLeg();
+                break;
+            case 6: 
+                drawHangManRgtLeg();
+                break;
+            case 7: 
+                gameOver();
+                break;
+       }
+        
+    } else {
+        let i = verify
+        opa[i].innerHTML = letra 
+    }
+  
+}
+
+function addUnderline(a) {
+    a
+    for(let i = 0; i < a.length;i++) { 
+        document.querySelector('.text').innerHTML += `<div class="underline-letra">${' '}</div>`
+    }
+}
+
+function gameOver(){
+    alert('Game Over')
+    document.location.reload(true)
+
+
+}
 
 
 //Notepad functions
