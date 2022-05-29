@@ -30,6 +30,7 @@ function gameInit() {
     removeMenuButtons()
     addTable()
     ramdonWords()
+    teste()
 }
 
 function removeMenuButtons() {
@@ -64,12 +65,30 @@ function ramdonWords() {
 }
 function teste() {
 
-    let input = document.querySelector('.analog-keyboard input')
+    // let input = document.querySelector('.analog-keyboard input')
    
-    let text = input.value
-    console.log(text)
-    check(text)
+    // let text = input.value
+    // console.log(text)
+    // check(text)
     //Vai pegar a letra digitada no teclado, armazenar em uma variavel e enviar a variavel para check(), se a letra for igual a uma letra da palvra a letra aparece na tela como correta, caso contrário, aparecera a letra indicando que estava incorreta e uma parte do corpo do homem na forca.
+
+  
+    let text = ' '
+    document.addEventListener("keyup", (event)=>{
+        let input = event.key
+        let verifyInput = gameKeyboard.indexOf(input)
+    
+        console.log('yaaaaaaa:',verifyInput)
+        
+        if(verifyInput != -1) {
+             text = input
+        
+        }
+        check(text)
+       
+    })
+
+
 
 }
 
